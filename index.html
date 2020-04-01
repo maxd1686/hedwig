@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        <script>
+         'use strict';
+        let a = prompt('Введите первое число','');
+        let c = prompt('Введите действие','');  
+        let b = prompt('Введите второе число','');
+        ActDef();
+
+        
+        let summ =function (a,b)
+                {
+                 return  (+a + +b);
+                }
+            
+        let diff = function (a,b)
+                {
+                    return a - b;
+                }
+            
+        let mult = function (a,b)  
+                {
+                    return a * b;
+                }
+            
+        let div = function (a,b) 
+                {
+                    return a / b ;
+                }
+        let restart = function (){
+                let d = prompt('введите exit если хотите выйти');
+                (d=="exit")?
+                alert('Закрываю'): ActDef() ;}
+        function ActDef(){
+        switch(c){
+            case '+':
+                alert(summ(a,b));
+                restart();
+            break;
+            case '-':
+                alert(diff(a,b));
+                restart();
+            break;
+            case '*':
+                alert(mult(a,b));
+                restart();
+            break;
+            case '/':
+                alert(div(a,b));
+                restart();
+            break;
+        }
+    }
+
+        </script>
+    </p>    
+</body>
+</html>
