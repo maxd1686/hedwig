@@ -9,36 +9,10 @@
     <p>
         <script>
          'use strict';
+         let begin = function(){
         let a = prompt('Введите первое число','');
         let c = prompt('Введите действие','');  
         let b = prompt('Введите второе число','');
-        ActDef();
-
-        
-        let summ =function (a,b)
-                {
-                 return  (+a + +b);
-                }
-            
-        let diff = function (a,b)
-                {
-                    return a - b;
-                }
-            
-        let mult = function (a,b)  
-                {
-                    return a * b;
-                }
-            
-        let div = function (a,b) 
-                {
-                    return a / b ;
-                }
-        let restart = function (){
-                let d = prompt('введите exit если хотите выйти');
-                (d=="exit")?
-                alert('Закрываю'): ActDef() ;}
-        function ActDef(){
         switch(c){
             case '+':
                 alert(summ(a,b));
@@ -57,7 +31,28 @@
                 restart();
             break;
         }
-    }
+        
+         }
+        let summ =(a,b)=> +a + +b;
+             
+        let diff =(a,b)=> +a - +b;
+                
+        let mult =(a,b)=> +a * +b;
+               
+        let div =(a,b) => +a / +b
+              
+        let restart = function (){
+                let d = prompt('введите exit если хотите выйти');
+                (d=="exit")?
+                alert('Закрываю'): begin() ;}
+             
+        
+        begin();
+    
+
+        
+        
+        
 
         </script>
     </p>    
